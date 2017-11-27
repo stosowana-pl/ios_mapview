@@ -1,24 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Piotr Gawrys-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Piotr Gawrys" id="BYZ-38-t0r" customClass="ViewController" customModule="pgawrys_mapview" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Usu-vG-H2g">
+                                <rect key="frame" x="5" y="632" width="365" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OY1-gQ-WS3">
+                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="startButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xnj-bt-dHf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkm-0K-JgV">
+                                        <rect key="frame" x="152.5" y="0.0" width="32" height="30"/>
+                                        <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="stopButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UbE-Do-XSR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJT-db-eOg">
+                                        <rect key="frame" x="303" y="0.0" width="62" height="30"/>
+                                        <state key="normal" title="Wyczysc"/>
+                                        <connections>
+                                            <action selector="clearButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pzq-jE-NVt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Piotr Gawrys" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYq-Gr-tzp">
+                                <rect key="frame" x="5" y="20" width="365" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ola-a0-mgq">
+                                <rect key="frame" x="10" y="60.5" width="355" height="521"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Rv-1J-KeA">
+                                <rect key="frame" x="10" y="601.5" width="355" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Usu-vG-H2g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="0nw-ti-IcL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Rv-1J-KeA" secondAttribute="trailing" constant="10" id="6zp-lU-l40"/>
+                            <constraint firstItem="8Rv-1J-KeA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="8Qr-Pg-n0V"/>
+                            <constraint firstAttribute="trailing" secondItem="xYq-Gr-tzp" secondAttribute="trailing" constant="5" id="8nd-3Q-1ow"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xYq-Gr-tzp" secondAttribute="trailing" constant="5" id="Aup-4M-fSe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Usu-vG-H2g" secondAttribute="trailing" constant="5" id="E86-xs-hZF"/>
+                            <constraint firstItem="ola-a0-mgq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ISY-Dx-7Wj"/>
+                            <constraint firstItem="Usu-vG-H2g" firstAttribute="top" secondItem="8Rv-1J-KeA" secondAttribute="bottom" constant="10" id="IfE-Xb-hfb"/>
+                            <constraint firstItem="8Rv-1J-KeA" firstAttribute="top" secondItem="ola-a0-mgq" secondAttribute="bottom" constant="20" id="K2o-yH-UPB"/>
+                            <constraint firstItem="ola-a0-mgq" firstAttribute="top" secondItem="xYq-Gr-tzp" secondAttribute="bottom" constant="20" id="KdZ-rb-JqP"/>
+                            <constraint firstItem="xYq-Gr-tzp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Lef-73-yh1"/>
+                            <constraint firstItem="xYq-Gr-tzp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="MJE-iN-Hpl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ola-a0-mgq" secondAttribute="trailing" constant="10" id="iIb-Xd-Aca"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Usu-vG-H2g" secondAttribute="bottom" constant="5" id="ktX-bZ-t8O"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="clearButton" destination="uJT-db-eOg" id="OIW-q9-2Ms"/>
+                        <outlet property="mapViewOutlet" destination="ola-a0-mgq" id="jaU-c1-s2r"/>
+                        <outlet property="startButton" destination="OY1-gQ-WS3" id="zYm-lt-Ymy"/>
+                        <outlet property="stopButton" destination="lkm-0K-JgV" id="aPW-uQ-449"/>
+                        <outlet property="textField" destination="8Rv-1J-KeA" id="GG9-VK-dnh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
